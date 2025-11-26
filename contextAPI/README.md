@@ -1,16 +1,23 @@
-# React + Vite
+# React Hooks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hooks in React are functions that enable the use of state and other React features within functional components, eliminating the need for class components. They were introduced in React 16.8 to provide a more direct and concise way to manage component logic and state.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 1. Context API:
+The **Context API** in React allows you to share data across your entire application **without passing props manually at every level**.  
+It is a built-in state management tool that helps avoid **prop-drilling** (passing data from parent → child → child…).
 
-## React Compiler
+Use it when multiple components need to access the same data such as theme, language, user authentication, cart items, etc.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Why Use Context API?
+- Avoids prop-drilling  
+- Makes global state management easy  
+- Cleaner component structure  
+- Built into React (no extra library like Redux needed)
 
-## Expanding the ESLint configuration
+### How it works (short)
+1. Create a Context with `createContext()`.  
+2. Provide a value using `Context.Provider` at a high level.  
+3. Consume the value inside any component using the `useContext()` hook.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
