@@ -9,13 +9,13 @@ It is a built-in state management tool that helps avoid **prop-drilling** (passi
 
 Use it when multiple components need to access the same data such as theme, language, user authentication, cart items, etc.
 
-### Why Use Context API?
+#### Why Use Context API?
 - Avoids prop-drilling  
 - Makes global state management easy  
 - Cleaner component structure  
 - Built into React (no extra library like Redux needed)
 
-### How it works (short)
+#### How it works (short)
 1. Create a Context with `createContext()`.  
 2. Provide a value using `Context.Provider` at a high level.  
 3. Consume the value inside any component using the `useContext()` hook.
